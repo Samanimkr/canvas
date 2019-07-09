@@ -1,9 +1,42 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 canvas {
-    border: 2px solid red;
+    border: 2px solid rgb(240, 240, 240);
     width: 100%;
 }
+
+
+.brushOptions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.palette {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.color {
+    cursor: pointer;
+    flex: 1;
+    height: 50px;
+    max-width: 50px;
+    border-radius: 20px;
+}
+
+.color:hover { opacity: 0.7 }
+
+.black { background: black }
+.blue { background: blue }
+.purple { background: purple }
+.red { background: red }
+.orange { background: orange }
+.pink { background: pink }

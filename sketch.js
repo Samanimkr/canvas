@@ -1,8 +1,9 @@
 let brushColor = 0;
-let brushSize = 5;
+let brushSize = 16;
 
 function setup() {
-    createCanvas(100%, 480);
+    const screenWidth = window.innerWidth || document.body.clientWidth;
+    createCanvas(screenWidth, 480);
 }
 
 function draw() {
