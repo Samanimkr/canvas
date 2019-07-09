@@ -1,4 +1,4 @@
-const OPTIONS_MENU_HEIGHT = 88;
+const OPTIONS_MENU_HEIGHT = 115;
 let brushColor = 'black';
 let brushSize = 10;
 
@@ -31,3 +31,8 @@ function handleColorChange() {
         brushColor = this.classList[1];
     }
 }
+
+const $slider = document.getElementById('slider');
+$slider.addEventListener('input', function() {
+    brushSize = this.value;
+});
