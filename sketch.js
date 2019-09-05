@@ -1,4 +1,4 @@
-const OPTIONS_MENU_HEIGHT = 115;
+const OPTIONS_MENU_HEIGHT = 145;
 let brushColor = 'black';
 let brushSize = 10;
 
@@ -35,4 +35,19 @@ function handleColorChange() {
 const $slider = document.getElementById('slider');
 $slider.addEventListener('input', function() {
     brushSize = this.value;
+});
+
+const $savebtn = document.getElementById('savebtn');
+const $clearbtn = document.getElementById('clearbtn');
+
+$savebtn.addEventListener('click', () => {
+    let canvas = document.getElementsByTagName('canvas')[0];
+    console.log('canvas: ', canvas);
+    let d = canvas.toDataURL("image/png");
+    var w=window.open('about:blank','image from canvas');
+    w.document.write("<img src='"+d+"' alt='from canvas'/>");
+});
+
+$clearbtn.addEventListener('click', () => {
+    clear();
 });
